@@ -1,0 +1,20 @@
+// Algorithms used in ths topic
+
+1.  Morris Traversal - For Traversal
+    Algorithm: (for inorder Traversal)
+    current = root
+    while(root != null)
+        if left doesn't exist :
+            print(current)
+            current = current.right
+        else :
+            predecessor = find(current) --> predecessor (move left then right until its null)
+            if(predecessor.right == null) 
+                predecessor.right = current
+                current = current.left
+            else :
+                predecessor.right = null
+                print(current)
+                current = current.right
+
+2.  
